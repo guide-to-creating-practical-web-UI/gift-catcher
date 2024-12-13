@@ -27,7 +27,7 @@ const keyPressEventHandler = (event: KeyboardEvent) => {
   }
 
   if (event.code === "KeyS") {
-    // Move right
+    // Move down
 
     movedLocation.y += 30;
 
@@ -35,7 +35,7 @@ const keyPressEventHandler = (event: KeyboardEvent) => {
   }
 
   if (event.code === "KeyD") {
-    // Move down
+    // Move right
 
     movedLocation.x += 30;
 
