@@ -79,7 +79,7 @@ type GameState = "idle" | "playing" | "end";
 
 let gameState: GameState = "idle";
 
-let remainingTime = 30;
+let remainingTime = 10;
 
 const clearGift = () => {
   const gifts = document.querySelectorAll(".gift");
@@ -152,14 +152,15 @@ const startGame = () => {
       clearInterval(timer);
       clearGift();
       gameState = "end";
-      score = 0;
       toggleModalDisplay();
     }
   }, 1000);
 };
 
 const handleRestart = () => {
-  remainingTime = 30;
+  remainingTime = 10;
+  score = 0;
+  showScore(0);
   showTimer(remainingTime);
   gameState = "playing";
   movedLocation.x = 0;
